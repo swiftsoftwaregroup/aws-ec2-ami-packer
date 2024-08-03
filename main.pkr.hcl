@@ -38,7 +38,7 @@ build {
     "source.amazon-ebs.ubuntu-jammy",
   ]
 
-  # provisioners are executed on the EC2 instance after the image is created
+  # provisioners are executed on the EC2 instance before the image is created
   provisioner "shell" {
     inline = [
       "echo Installing NGINX",
