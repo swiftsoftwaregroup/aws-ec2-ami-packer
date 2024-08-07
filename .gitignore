@@ -16,3 +16,7 @@ crash.log
 *.box
 
 packer-manifest.json
+user-data
+meta-data
+*.vmdk
+*.iso
