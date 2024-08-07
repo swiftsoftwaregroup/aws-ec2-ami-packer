@@ -54,6 +54,32 @@ This script will launch an instance from the AMI and run tests on it:
 ./test.sh
 ```
 
+## Export AMI to VMDK
+
+```bash
+./export-vmdk.sh
+```
+
+## Test in VirtualBox
+
+Start the virtual machine:
+
+```bash
+./start-vm.sh
+```
+
+Try to connect:
+
+```bash
+./login.sh
+```
+
+Once you've confirmed you can access the VM, remove the cloud-init ISO (see `start-vm.sh` script for details):
+
+```bash
+VBoxManage storageattach "UbuntuServer2204" --storagectl "IDE Controller" --port 0 --device 1 --type dvddrive --medium none
+```
+
 ## Cleanup
 
 Deregister the AMI image and delete ALL image snapshots.
