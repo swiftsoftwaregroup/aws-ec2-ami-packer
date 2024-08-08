@@ -77,7 +77,9 @@ Try to connect:
 Once you've confirmed you can access the VM, remove the cloud-init ISO (see `start-vm.sh` script for details):
 
 ```bash
+VBoxManage controlvm "UbuntuServer2204" poweroff
 VBoxManage storageattach "UbuntuServer2204" --storagectl "IDE Controller" --port 0 --device 1 --type dvddrive --medium none
+VBoxManage startvm "UbuntuServer2204" --type gui
 ```
 
 ## Cleanup
