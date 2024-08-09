@@ -56,6 +56,14 @@ This script will launch an instance from the AMI and run tests on it:
 
 ## Export AMI to VMDK
 
+Create S3 bucket:
+
+```bash
+./create-s3-bucket.sh
+```
+
+Export VMDK:
+
 ```bash
 ./export-vmdk.sh
 ```
